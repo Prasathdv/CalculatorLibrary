@@ -23,8 +23,9 @@ jobs:
           name: run tests
           command: |
             . calc/bin/activate
+            mkdir test-results
             flake8 --exclude=calc* --statistics
             pytest -v --cov=calculator  
       # Step 4: Store test results
-      - store_test_results:
+      - store_test_results:        
           path: test-results        
