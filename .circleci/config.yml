@@ -17,7 +17,7 @@ jobs:
           command: |
             python3 -m venv calc
             . calc/bin/activate
-            pip install -r requierments.txt
+            pip install -r requirements.txt
       # Step 3: Run linter and pytest with code coverage
       - run:
           name: run tests
