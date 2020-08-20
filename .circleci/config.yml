@@ -24,4 +24,7 @@ jobs:
           command: |
             . calc/bin/activate
             flake8 --exclude=calc* --statistics
-            pytest -v --cov=calculator    
+            pytest -v --cov=calculator  
+      # Step 4: Store test results
+      - store_test_results:
+          path: test-results        
