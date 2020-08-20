@@ -22,5 +22,6 @@ jobs:
       - run:
           name: run tests
           command: |
+            . calc/bin/activate
             flake8 --exclude=calc* --statistics
             pytest -v --cov=calculator    
